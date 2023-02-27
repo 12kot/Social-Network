@@ -1,0 +1,43 @@
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+}
+
+.dialogs_items {
+    padding: 10px;
+}
+
+.messages {
+    padding: 10px;
+}
+
+.input_box {
+  margin: 5px;
+  display: flex;
+  justify-content: left;
+}
+
+.input_box button{
+  font-size: 15px;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+}
+
+.input_box textarea {
+  resize: none;
+  padding: 5px;
+  font-size: 16px;
+
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+textarea:focus {
+  border: 3px solid #555;
+}

@@ -1,0 +1,33 @@
+.layout_header {
+  /* grid-area: h; */
+  top: 0;
+  left: 0;
+  right: 0;
+  position: sticky;
+  z-index: 1;
+}
+
+.header {
+  background-color: rgba(248, 249, 251, 0.66);
+  backdrop-filter: blur(1.6rem);
+  z-index: 0;
+
+  height: 65px;
+  font-size: 25px;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header img {
+  width: 43px;
+  height: 35px;
+  margin: -7px 15px -8px -10px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Comfortaa;
+  src: url(./../Fonts/Comfortaa-VariableFont_wght.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  background-color: rgba(248, 249, 251, 1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-wrapper {
+  font-family: Comfortaa;
+  margin: 0 auto;
+  margin-top: 5px;
+  display: grid;
+  width: 1300px;
+
+  grid-template-areas:
+    /* "h h" */
+    "n c";
+  /* grid-template-rows: 80px 1fr; */
+  grid-template-columns: 1fr 5fr;
+
+  grid-gap: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-wrapper-content {
+  grid-area: c;
 }
 
-.App-link {
-  color: #61dafb;
+.round {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.background-color {
+  border: 1px solid rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 5px #e6e6e6;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: gold;
 }

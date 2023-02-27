@@ -1,0 +1,31 @@
+.posts {
+  font-size: 15px;
+}
+
+.input_box {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.input_box textarea {
+  resize: none;
+  padding: 5px;
+  font-size: 16px;
+
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+textarea:focus {
+  border: 3px solid #555;
+}
+
+.input_box button{
+  width: 250px;
+  text-align: center;
+}

@@ -1,0 +1,27 @@
+.nav {
+  grid-area: n;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 20px;
+  height: 700px;
+}
+
+.item {
+  padding: 2px;
+}
+
+.item:hover {
+  background-color: rgba(216, 216, 216, 0.532);
+  border-radius: 7px;
+}
+
+.avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 7px #666;
+  float: left;
+  margin-right: 5%;
+}
+

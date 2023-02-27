@@ -1,0 +1,15 @@
+.item {
+  color: brown;
+  font-size: 17px;
+}
+
+.item img {
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 7px #666;
+  margin-right: 5%;
+}
+
+.likes {
+    color: green;
+}
