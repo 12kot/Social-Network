@@ -7,6 +7,7 @@ import News from "./Components/News/News";
 import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
 import Friends from "./Components/Profile/Friends/Friends";
+import Footer from "./Components/Footer/footer"
 import { Route, Routes } from "react-router-dom";
 
 const App = (props) => {
@@ -42,6 +43,7 @@ const App = (props) => {
           </Routes>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

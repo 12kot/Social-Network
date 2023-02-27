@@ -4,8 +4,8 @@ import styles from "./MyPosts.module.css";
 import {
   addPostActionCreator,
   updatePostActionCreator,
-} from "../../../Redux/state";
-import btn from "./../../buttons/buttons.module.css"
+} from "../../../Redux/profileReducer";
+import btn from "./../../buttons/buttons.module.css";
 
 const MyPosts = (props) => {
   let postsElements = props.posts.map((post) => (
