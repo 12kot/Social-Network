@@ -1,6 +1,6 @@
 @font-face {
   font-family: Comfortaa;
-  src: url(./../Fonts/Comfortaa-VariableFont_wght.ttf);
+  src: url(./Fonts/Comfortaa-VariableFont_wght.ttf);
 }
 
 .app {
@@ -27,6 +27,7 @@
 
 .app-wrapper-content {
   min-height: calc(100vh - 80px);
+  margin-bottom: 10px;
   grid-area: c;
 }
 

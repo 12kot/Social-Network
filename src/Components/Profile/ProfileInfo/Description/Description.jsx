@@ -1,3 +1,5 @@
+import React from "react";
+
 const Description = (props) => {
     return (<p>
         <b>{props.name}</b>
