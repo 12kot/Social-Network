@@ -37,15 +37,7 @@ export let store = {
       newMessageText: "",
     },
 
-    sidebar: {}
-  },
-
-  getProfilePage() {
-    return this._state.profilePage;
-  },
-
-  getDialogsPage() {
-    return this._state.dialogsPage;
+    sidebar: {},
   },
 
   subscribe(observer) {
@@ -57,7 +49,7 @@ export let store = {
   dispatch(action) {
     profileReducer(this._state.profilePage, action);
     dialogsReducer(this._state.dialogsPage, action);
-    sidebarReducer(this._state.sidebar, action)
+    sidebarReducer(this._state.sidebar, action);
 
     this._rerenderTree(this);
   },

@@ -2,13 +2,13 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
 import Profile from "./Components/Profile/Profile";
-import Dialogs from "./Components/Dialogs/Dialogs";
 import News from "./Components/News/News";
 import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
 import Friends from "./Components/Profile/Friends/Friends";
-import Footer from "./Components/Footer/footer"
+import Footer from "./Components/Footer/footer";
 import { Route, Routes } from "react-router-dom";
+import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 
 const App = (props) => {
   return (
@@ -18,23 +18,10 @@ const App = (props) => {
         <Navbar />
         <div className="app-wrapper-content">
           <Routes>
-            <Route
-              path="/*"
-              element={
-                <Profile
-                  profilePage={props.store.getProfilePage()}
-                  dispatch={props.store.dispatch.bind(props.store)}
-                />
-              }
-            />
+            <Route path="/*" element={<Profile store={props.store} />} />
             <Route
               path="/dialogs/*"
-              element={
-                <Dialogs
-                  dialogsPage={props.store.getDialogsPage()}
-                  dispatch={props.store.dispatch.bind(props.store)}
-                />
-              }
+              element={<DialogsContainer store={props.store} />}
             />
             <Route path="/news" element={<News />} />
             <Route path="/music" element={<Music />} />

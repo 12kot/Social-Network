@@ -1,6 +1,6 @@
 import React from "react";
 import "./../../App.css";
-import MyPosts from "./MyPosts/MyPosts";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 import Banner from "./Banner/Banner";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
@@ -9,11 +9,7 @@ const Profile = (props) => {
     <div className={`round background-color`}>
       <Banner />
       <ProfileInfo />
-      <MyPosts
-        posts={props.profilePage.posts}
-        newPostText={props.profilePage.newPostText}
-        dispatch={props.dispatch}
-      />
+      <MyPostsContainer store={props.store} />
     </div>
   );
 };

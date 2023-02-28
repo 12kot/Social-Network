@@ -5,6 +5,8 @@
 
 .app {
   background-color: rgba(248, 249, 251, 1);
+  -webkit-background-size: 100%;
+  background-size: 100%;
 }
 
 .app-wrapper {
@@ -19,11 +21,12 @@
     "n c";
   /* grid-template-rows: 80px 1fr; */
   grid-template-columns: 1fr 5fr;
-
+  
   grid-gap: 10px;
 }
 
 .app-wrapper-content {
+  min-height: calc(100vh - 80px);
   grid-area: c;
 }
 
