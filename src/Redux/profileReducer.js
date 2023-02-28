@@ -34,15 +34,19 @@ const _addPost = (state) => {
     likesCount: 0,
   };
 
-  state.posts.push(newPost);
-  state.newPostText = "";
+  let newState = JSON.parse(JSON.stringify(state));
 
-  return state;
+  newState.posts.push(newPost);
+  newState.newPostText = "";
+
+  return newState;
 };
 
 const _updatePostText = (state, text) => {
-  state.newPostText = text;
-  return state;
+  let newState = JSON.parse(JSON.stringify(state));
+
+  newState.newPostText = text;
+  return newState;
 };
 
 export const addPostActionCreator = () => ({ type: ADD_POST });

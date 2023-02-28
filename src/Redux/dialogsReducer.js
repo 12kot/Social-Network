@@ -40,15 +40,19 @@ const _sendMessage = (state) => {
     message: state.newMessageText,
   };
 
-  state.messagesData.push(newMessage);
-  state.newMessageText = "";
+  let newState = JSON.parse(JSON.stringify(state));
 
-  return state;
+  newState.messagesData.push(newMessage);
+  newState.newMessageText = "";
+
+  return newState;
 };
 
 const _updateMessageText = (state, text) => {
-  state.newMessageText = text;
-  return state;
+  let newState = JSON.parse(JSON.stringify(state));
+
+  newState.newMessageText = text;
+  return newState;
 };
 
 export const sendMessageActionCreator = () => ({ type: SEND_MESSAGE });
