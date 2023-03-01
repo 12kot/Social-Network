@@ -24,22 +24,31 @@ const Navbar = (props) => {
       <div className={styles.item}>
         <NavLink to="/friends">
           Friends<br></br>
-          <img
-            className={styles.avatar}
-            src={require("./../../Images/avatar.jpg")}
-            alt="Avatar"
-          ></img>
-          <img
-            className={styles.avatar}
-            src={require("./../../Images/avatar.jpg")}
-            alt="Avatar"
-          ></img>
+        </NavLink>
+        <NavLink to="/friends/1">
           <img
             className={styles.avatar}
             src={require("./../../Images/avatar.jpg")}
             alt="Avatar"
           ></img>
         </NavLink>
+        <NavLink to="/friends/2">
+          <img
+            className={styles.avatar}
+            src={require("./../../Images/avatar.jpg")}
+            alt="Avatar"
+          ></img>
+        </NavLink>
+        <NavLink to="/friends/3">
+          <img
+            className={styles.avatar}
+            src={require("./../../Images/avatar.jpg")}
+            alt="Avatar"
+          ></img>
+        </NavLink>
+      </div>
+      <div className={styles.item}>
+        <NavLink to="/todo-list">ToDo List</NavLink>
       </div>
     </nav>
   );
