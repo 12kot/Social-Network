@@ -5,6 +5,8 @@
   right: 0;
   position: sticky;
   z-index: 1;
+
+  width: 100%;
 }
 
 .header {

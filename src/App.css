@@ -14,7 +14,7 @@
   margin: 0 auto;
   margin-top: 5px;
   display: grid;
-  width: 1300px;
+  max-width: 1300px;
 
   grid-template-areas:
     /* "h h" */
