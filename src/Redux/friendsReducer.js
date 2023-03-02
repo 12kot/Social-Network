@@ -3,7 +3,7 @@ let initialState = {
     {
       id: 1,
       name: "Katya",
-      description: "Kolyaa Kolyaaaa... menya...",
+      description: "Kolyaa Kolyaaaa Nikolaay...",
       imgRef: `avatar`,
     },
     {
