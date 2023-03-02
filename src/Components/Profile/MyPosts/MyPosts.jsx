@@ -25,7 +25,6 @@ const MyPosts = (props) => {
         <div className={styles.input_box}>
           <textarea
             rows={3}
-            cols={110}
             placeholder="Input text"
             type="text"
             onChange={postChange}

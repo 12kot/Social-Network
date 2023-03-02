@@ -2,10 +2,11 @@
   margin: 5px;
   display: flex;
   justify-content: center;
-  height: 300px;
 
   margin-top: 30px;
 }
 .banner img {
+  flex-wrap: wrap;
+  max-width: 90%;
   box-shadow: 0 0 7px #666;
 }

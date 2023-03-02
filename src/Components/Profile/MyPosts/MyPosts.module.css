@@ -19,6 +19,8 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   outline: none;
+
+  width: 300px;
 }
 
 textarea:focus {
@@ -26,6 +28,5 @@ textarea:focus {
 }
 
 .input_box button{
-  width: 250px;
   text-align: center;
 }
