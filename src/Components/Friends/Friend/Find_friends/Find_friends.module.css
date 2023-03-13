@@ -1,16 +1,16 @@
-.posts {
-  font-size: 15px;
+.find {
+  display: flex;
+  flex-direction: column;
 }
 
 .input_box {
-  margin: 5px;
+  margin-top: 5px;
   display: flex;
   justify-content: center;
 }
 
 .input_box textarea {
   resize: none;
-  padding: 5px;
   font-size: 16px;
 
   box-sizing: border-box;
@@ -19,14 +19,16 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   outline: none;
-
-  width: 300px;
 }
 
 .input_box textarea:focus {
   border: 3px solid #555;
 }
 
-.input_box button{
-  text-align: center;
+.input_box button {
+    height: 22px;
+    width: 70%;
+    text-align: center;
+    padding: 0;
+    font-size: 14px;
 }

@@ -6,7 +6,7 @@ import Profile from "./Components/Profile/Profile";
 import News from "./Components/News/News";
 import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
-import FriendsContainer from "./Components/Profile/Friends/FriendsContainer";
+import FriendsContainer from "./Components/Friends/FriendsContainer";
 import Footer from "./Components/Footer/footer";
 import { Route, Routes } from "react-router-dom";
 import DialogsContainer from "./Components/Dialogs/DialogsContainer";

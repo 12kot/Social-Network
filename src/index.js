@@ -21,7 +21,6 @@ let rerenderTree = (store) => {
   );
 };
 
-console.log(store);
 rerenderTree(store);
 store.subscribe(() => {
   rerenderTree(store);

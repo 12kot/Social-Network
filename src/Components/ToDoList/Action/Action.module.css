@@ -1,3 +1,35 @@
-.action {
-  background-color: #24c724bf;
+.item {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 5px #d4d4d4;
+
+  height: 200px;
+  width: 200px;
+  max-width: 200px;
+  border-style: solid;
+
+  text-align: center;
+  margin: 6px;
+
+  transition: 1s;
+}
+
+.item:hover {
+  opacity: 0.8;
+  transform: scale(1);
+}
+
+.text {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.btn {
+  margin-top: auto;
+}
+.btn_del {
+  margin-top: 0;
 }

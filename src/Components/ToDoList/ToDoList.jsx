@@ -11,6 +11,7 @@ const ToDoList = (props) => {
       status={obj.status}
       deleteAction={props.deleteAction}
       compliteAction={props.compliteAction}
+      key={obj.id}
     />
   ));
 
@@ -40,7 +41,7 @@ const ToDoList = (props) => {
         </button>
       </div>
 
-      <ul>{list}</ul>
+      <div className={styles.items}>{list}</div>
     </div>
   );
 };

@@ -1,0 +1,27 @@
+.friends {
+  margin: 0 auto;
+  margin-top: 5px;
+  display: grid;
+  max-width: 1300px;
+
+  grid-template-areas:
+    "friends find_friends";
+  grid-template-columns: 5fr 1fr;
+
+  grid-gap: 10px;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: flex-start;
+}
+
+.friend {
+  grid-area: "friends";
+}
+
+.find_friends {
+  grid-area: "find_friends";
+}

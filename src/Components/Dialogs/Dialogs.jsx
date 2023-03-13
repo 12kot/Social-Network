@@ -6,11 +6,11 @@ import btn from "./../buttons/buttons.module.css";
 
 const Dialogs = (props) => {
   let dialogsElement = props.dialogsData.map((dialog) => (
-    <DialogItem id={dialog.id} name={dialog.name} />
+    <DialogItem id={dialog.id} name={dialog.name} key={dialog.id} />
   ));
 
   let messagesElements = props.messagesData.map((message) => (
-    <Message id={message.id} message={message.message} />
+    <Message id={message.id} message={message.message} key={message.id} />
   ));
 
   let getMessage = React.createRef();

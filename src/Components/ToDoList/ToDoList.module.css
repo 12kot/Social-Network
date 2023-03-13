@@ -14,3 +14,10 @@
 .input:focus {
   border: 3px solid #555;
 }
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: flex-start;
+}

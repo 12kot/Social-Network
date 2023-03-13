@@ -3,8 +3,12 @@ import { NavLink } from "react-router-dom";
 import styles from "./Friend.module.css";
 
 let Friend = (props) => {
-  const photo = require(`./../../../../Images/${props.imgRef}.jpg`);
+  const photo = require(`./../../../Images/${props.imgRef}.jpg`);
   let path = `/friends/${props.id}`;
+
+  let followUser = () => {
+    props.followUser(props.id);
+  }
 
   return (
     <NavLink to={path}>
@@ -18,8 +22,8 @@ let Friend = (props) => {
           <b>{props.name}</b>
         </div>
         <div className={`${styles.title}`}>{props.description}</div>
-        <button className={`${styles.footer} ${styles.item}`}>
-          Посетить страницу
+        <button onClick={followUser} className={`${styles.footer} ${styles.item}`}>
+          {props.followed}
         </button>
       </div>
     </NavLink>
