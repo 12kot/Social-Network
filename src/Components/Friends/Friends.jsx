@@ -1,41 +1,30 @@
 import React from "react";
+import styles from "./FriendsAPI.module.css";
 import Find_friends from "./Friend/Find_friends/Find_friends";
-import User from "./Friend/Friend";
-import styles from "./Friends.module.css";
 
-const Friends = (props) => {
-  let friends = props.findUsers.map((friend) => {
-    if (friend.followed)
-      return (
-        <User
-          id={friend.id}
-          name={friend.name}
-          description={friend.description}
-          imgRef={friend.imgRef}
-          followUser={props.followUser}
-          followed="Посетить страницу"
-          key={friend.id}
-        />
-      );
-    else
-      return (
-        <User
-          id={friend.id}
-          name={friend.name}
-          description={friend.description}
-          imgRef={friend.imgRef}
-          followUser={props.followUser}
-          followed="Добавить в друзья"
-          key={friend.id}
-        />
-      );
-  });
+let Friends = (props) => {
+    let numberOfButtons = [];
+
+    let pagesCount = Math.ceil(
+      props.totalUsersCount / props.pageSize
+    );
+    for (let i = 1; i <= pagesCount; i++) {
+      if (i > 100) break;
+      numberOfButtons.push(i);
+    }
 
   return (
     <div>
       <h1>Users</h1>
+      <span>
+        {numberOfButtons.map((i) => {
+          return <button onClick={() => props.setCurrentPage(i)}>{i}</button>;
+        })}
+      </span>
       <div className={`${styles.friends}`}>
-        <div className={`${styles.items} ${styles.friend}`}>{friends}</div>
+        <div className={`${styles.items} ${styles.friend}`}>
+          {props.getUsers()}
+        </div>
         <div className={`${styles.find_friend}`}>
           <Find_friends
             findTextChange={props.findTextChange}

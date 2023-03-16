@@ -1,62 +1,21 @@
 const FIND_TEXT_CHANGE = "FIND_TEXT_CHANGE";
 const FOLLOW = "FOLLOW";
+const SET_USERS = "SET_USERS";
+const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
+const SET_TOTAL_USERS_COUNT = "SET_TOTAL_USERS_COUNT";
+const SET_FETCHING = "SET_FETCHING";
 
 let initialState = {
-  friends: [
-    {
-      id: 1,
-      followed: true,
-      name: "Katya",
-      description: "Kolyaa Kolyaaaa Nikolaay...",
-      imgRef: `avatar`,
-    },
-    {
-      id: 2,
-      followed: true,
-      name: "Evgesha programmer",
-      description: "Evgesha is the best software engineer",
-      imgRef: "avaEvgesha",
-    },
-    {
-      id: 3,
-      followed: true,
-      name: "Nikitosha",
-      description: "Nikitosha loves Engesha",
-      imgRef: "avaNikita",
-    },
-    {
-      id: 4,
-      followed: false,
-      name: "Nikolay",
-      description: "A na more beliy pesok. Duet tepliy veter v lico..",
-      imgRef: "spikeAva",
-    },
-    {
-      id: 5,
-      followed: false,
-      name: "Turb0luv",
-      description: "Lublu kogda volosatie muzhiki obmazivayutsa maslom..",
-      imgRef: "avaDima",
-    },
-    {
-      id: 6,
-      followed: false,
-      name: "No Name",
-      description: "I'm Anonymous. Ha-ha-ha",
-      imgRef: "avaAnonymous",
-    },
-    {
-      id: 7,
-      followed: true,
-      name: "Nastya",
-      description: "Nastya",
-      imgRef: "avaAnonymous",
-    },
-  ],
+  friends: [],
 
   findUsers: [],
 
   findTextChange: "",
+
+  pageSize: 20,
+  totalUsersCount: 21,
+  currentPage: 2,
+  isFetching: true,
 };
 
 let friendsReducer = (state = initialState, action) => {
@@ -65,10 +24,33 @@ let friendsReducer = (state = initialState, action) => {
       return _updateMessageText(action.text, initialState);
     case FOLLOW:
       return followUser(state, action.id);
+    case SET_USERS:
+      state.friends = action.users;
+      return { ...state, friends: action.users };
+    case SET_CURRENT_PAGE:
+      return { ...state, currentPage: action.currentPage };
+    case SET_TOTAL_USERS_COUNT:
+      return { ...state, totalUsersCount: action.totalUsersCount };
+    case SET_FETCHING:
+      return { ...state, isFetching: action.isFetching };
     default:
       return state;
   }
 };
+
+export const setCurrentPageAC = (currentPage) => {
+  return {
+    type: SET_CURRENT_PAGE,
+    currentPage: currentPage,
+  };
+};
+
+export const setTotalUsersCountAC = (totalUsersCount) => {
+  return {
+    type: SET_TOTAL_USERS_COUNT,
+    totalUsersCount: totalUsersCount,
+  };
+}
 
 const followUser = (state, id) => {
   let newState = JSON.parse(JSON.stringify(state));
@@ -111,6 +93,16 @@ export const updateFindTextActionCreator = (text) => ({
 export const followAC = (id) => ({
   type: FOLLOW,
   id: id,
+});
+
+export const setUsersAC = (users) => ({
+  type: SET_USERS,
+  users: users,
+});
+
+export const setFetchingAC = (isFetching) => ({
+  type: SET_FETCHING,
+  isFetching: isFetching,
 });
 
 export default friendsReducer;
