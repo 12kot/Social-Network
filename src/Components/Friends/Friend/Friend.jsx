@@ -3,8 +3,10 @@ import { NavLink } from "react-router-dom";
 import styles from "./Friend.module.css";
 
 let Friend = (props) => {
-  const photo = props.imgRef != null ?
-    props.imgRef : require(`./../../../Images/avaAnonymous.jpg`);
+  const photo =
+    props.imgRef != null
+      ? props.imgRef
+      : require(`./../../../Images/avaAnonymous.jpg`);
   let path = `/friends/${props.id}`;
 
   let followUser = () => {

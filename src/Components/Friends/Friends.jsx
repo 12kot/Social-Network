@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./FriendsAPI.module.css";
-import Find_friends from "./Friend/Find_friends/Find_friends";
+import FindFriends from "./Friend/FindFriends/FindFriends";
 
 let Friends = (props) => {
     let numberOfButtons = [];
@@ -26,7 +26,7 @@ let Friends = (props) => {
           {props.getUsers()}
         </div>
         <div className={`${styles.find_friend}`}>
-          <Find_friends
+          <FindFriends
             findTextChange={props.findTextChange}
             findText={props.findText}
             title_text="Find Users"

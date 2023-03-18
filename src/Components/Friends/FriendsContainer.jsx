@@ -14,10 +14,6 @@ import Friends from "./Friends";
 import Preloader from "../Common/Preloader/Preloader";
 
 class FriendsAPI extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount = () => {
     this.props.setFetching(true);
 
@@ -105,32 +101,14 @@ let mapStateToProps = (state) => {
   };
 };
 
-let mapDispatchToProps = (dispatch) => {
+let mapDispatchToProps = () => {
   return {
-    findTextChange: (text) => {
-      let action = updateFindTextActionCreator(text);
-      dispatch(action);
-    },
-    followUser: (id) => {
-      let action = followAC(id);
-      dispatch(action);
-    },
-    setUsers: (users) => {
-      let action = setUsersAC(users);
-      dispatch(action);
-    },
-    setCurrentPage: (currentPage) => {
-      let action = setCurrentPageAC(currentPage);
-      dispatch(action);
-    },
-    setTotalUsersCount: (totalUsersCount) => {
-      let action = setTotalUsersCountAC(totalUsersCount);
-      dispatch(action);
-    },
-    setFetching: (isFetching) => {
-      let action = setFetchingAC(isFetching);
-      dispatch(action);
-    },
+    findTextChange: updateFindTextActionCreator,
+    followUser: followAC,
+    setUsers: setUsersAC,
+    setCurrentPage: setCurrentPageAC,
+    setTotalUsersCount: setTotalUsersCountAC,
+    setFetching: setFetchingAC,
   };
 };
 
