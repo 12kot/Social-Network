@@ -8,14 +8,14 @@ const ProfileInfo = (props) => {
     <div>
       <div className={styles.description}>
         <div>
-          <Avatar />
+          <Avatar
+            photos={props.photos}
+          />
         </div>
         <div>
           <Description
-            name="Nikita"
-            age="19"
-            gender="female"
-            description="Nikitosha"
+            fullName={props.fullName}
+            aboutMe={props.aboutMe}
           />
         </div>
       </div>

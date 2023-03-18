@@ -7,7 +7,8 @@ let Friend = (props) => {
     props.imgRef != null
       ? props.imgRef
       : require(`./../../../Images/avaAnonymous.jpg`);
-  let path = `/friends/${props.id}`;
+  
+  let path = `/profile/${props.id}`;
 
   let followUser = () => {
     props.followUser(props.id);

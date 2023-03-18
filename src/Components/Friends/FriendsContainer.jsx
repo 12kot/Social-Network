@@ -23,7 +23,6 @@ class FriendsAPI extends React.Component {
       )
       .then((props) => {
         this.props.setUsers(props.data.items);
-        console.log(props);
         this.props.setTotalUsersCount(props.data.totalCount);
         this.props.setFetching(false);
       });
@@ -102,8 +101,12 @@ let mapStateToProps = (state) => {
 };
 
 let FriendContainer = connect(mapStateToProps, {
-  findTextChange, followUser, setUsers,
-  setCurrentPage, setTotalUsersCount, setFetching,
+  findTextChange,
+  followUser,
+  setUsers,
+  setCurrentPage,
+  setTotalUsersCount,
+  setFetching,
 })(FriendsAPI);
 
 export default FriendContainer;
