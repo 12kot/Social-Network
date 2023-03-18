@@ -101,17 +101,13 @@ let mapStateToProps = (state) => {
   };
 };
 
-let mapDispatchToProps = () => {
-  return {
-    findTextChange: updateFindTextActionCreator,
-    followUser: followAC,
-    setUsers: setUsersAC,
-    setCurrentPage: setCurrentPageAC,
-    setTotalUsersCount: setTotalUsersCountAC,
-    setFetching: setFetchingAC,
-  };
-};
-
-let FriendContainer = connect(mapStateToProps, mapDispatchToProps)(FriendsAPI);
+let FriendContainer = connect(mapStateToProps, {
+  findTextChange: updateFindTextActionCreator,
+  followUser: followAC,
+  setUsers: setUsersAC,
+  setCurrentPage: setCurrentPageAC,
+  setTotalUsersCount: setTotalUsersCountAC,
+  setFetching: setFetchingAC,
+})(FriendsAPI);
 
 export default FriendContainer;

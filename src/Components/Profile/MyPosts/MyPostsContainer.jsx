@@ -12,13 +12,9 @@ let mapStateToProps = (state) => {
   };
 };
 
-let mapDispatchToProps = () => {
-  return {
-    addPost: addPostActionCreator,
-    postChange: updatePostActionCreator,
-  };
-};
-
-let MyPostsContainer = connect(mapStateToProps, mapDispatchToProps)(MyPosts);
+let MyPostsContainer = connect(mapStateToProps, {
+  addPost: addPostActionCreator,
+  postChange: updatePostActionCreator,
+})(MyPosts);
 
 export default MyPostsContainer;

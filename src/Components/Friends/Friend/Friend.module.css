@@ -7,7 +7,7 @@
   box-shadow: 0 0 5px #d4d4d4;
 
   height: 300px;
-  max-width: 200px;
+ 
   border-style: solid;
 
   text-align: center;
@@ -21,9 +21,10 @@
 }
 
 .friend img {
-  max-width: 200px;
-  height: 130px;
-  max-height: 130px;
+  min-width: 13vw;
+  min-height: 7.3vw;
+  max-height: 8vw;
+
   object-fit: cover;
   object-position: 0 0;
 }
