@@ -55,9 +55,9 @@ const _updateMessageText = (state, text) => {
   return newState;
 };
 
-export const sendMessageActionCreator = () => ({ type: SEND_MESSAGE });
+export const sendMessage = () => ({ type: SEND_MESSAGE });
 
-export const updateMessageActionCreator = (text) => ({
+export const updateMessage = (text) => ({
   type: UPDATE_MESSAGE_TEXT,
   text: text,
 });

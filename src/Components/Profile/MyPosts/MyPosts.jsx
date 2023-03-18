@@ -14,8 +14,8 @@ const MyPosts = (props) => {
     props.addPost();
   };
 
-  let postChange = () => {
-    props.postChange(newPostElement.current.value);
+  let updatePost = () => {
+    props.updatePost(newPostElement.current.value);
   };
 
   return (
@@ -27,7 +27,7 @@ const MyPosts = (props) => {
             rows={3}
             placeholder="Input text"
             type="text"
-            onChange={postChange}
+            onChange={updatePost}
             ref={newPostElement}
             value={props.newPostText}
           />

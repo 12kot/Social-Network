@@ -49,9 +49,9 @@ const _updatePostText = (state, text) => {
   return newState;
 };
 
-export const addPostActionCreator = () => ({ type: ADD_POST });
+export const addPost = () => ({ type: ADD_POST });
 
-export const updatePostActionCreator = (text) => ({
+export const updatePost = (text) => ({
   type: UPDATE_POST_TEXT,
   text: text,
 });

@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import {
-  followAC,
-  setCurrentPageAC,
-  setFetchingAC,
-  setTotalUsersCountAC,
-  setUsersAC,
-  updateFindTextActionCreator,
+  followUser,
+  setCurrentPage,
+  setFetching,
+  setTotalUsersCount,
+  setUsers,
+  findTextChange,
 } from "../../Redux/friendsReducer";
 import User from "./Friend/Friend";
 import axios from "axios";
@@ -102,12 +102,8 @@ let mapStateToProps = (state) => {
 };
 
 let FriendContainer = connect(mapStateToProps, {
-  findTextChange: updateFindTextActionCreator,
-  followUser: followAC,
-  setUsers: setUsersAC,
-  setCurrentPage: setCurrentPageAC,
-  setTotalUsersCount: setTotalUsersCountAC,
-  setFetching: setFetchingAC,
+  findTextChange, followUser, setUsers,
+  setCurrentPage, setTotalUsersCount, setFetching,
 })(FriendsAPI);
 
 export default FriendContainer;

@@ -23,7 +23,7 @@ let friendsReducer = (state = initialState, action) => {
     case FIND_TEXT_CHANGE:
       return _updateMessageText(action.text, initialState);
     case FOLLOW:
-      return followUser(state, action.id);
+      return _followUser(state, action.id);
     case SET_USERS:
       state.friends = action.users;
       return { ...state, friends: action.users };
@@ -38,21 +38,21 @@ let friendsReducer = (state = initialState, action) => {
   }
 };
 
-export const setCurrentPageAC = (currentPage) => {
+export const setCurrentPage = (currentPage) => {
   return {
     type: SET_CURRENT_PAGE,
     currentPage: currentPage,
   };
 };
 
-export const setTotalUsersCountAC = (totalUsersCount) => {
+export const setTotalUsersCount = (totalUsersCount) => {
   return {
     type: SET_TOTAL_USERS_COUNT,
     totalUsersCount: totalUsersCount,
   };
 }
 
-const followUser = (state, id) => {
+const _followUser = (state, id) => {
   let newState = JSON.parse(JSON.stringify(state));
 
   newState.friends.forEach((user) => {
@@ -85,22 +85,22 @@ const findUsers = (state) => {
   return newState;
 };
 
-export const updateFindTextActionCreator = (text) => ({
+export const findTextChange = (text) => ({
   type: FIND_TEXT_CHANGE,
   text: text,
 });
 
-export const followAC = (id) => ({
+export const followUser = (id) => ({
   type: FOLLOW,
   id: id,
 });
 
-export const setUsersAC = (users) => ({
+export const setUsers = (users) => ({
   type: SET_USERS,
   users: users,
 });
 
-export const setFetchingAC = (isFetching) => ({
+export const setFetching = (isFetching) => ({
   type: SET_FETCHING,
   isFetching: isFetching,
 });

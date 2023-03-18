@@ -1,7 +1,4 @@
-import {
-  sendMessageActionCreator,
-  updateMessageActionCreator,
-} from "../../Redux/dialogsReducer";
+import { sendMessage, updateMessage } from "../../Redux/dialogsReducer";
 import Dialogs from "./Dialogs";
 import { connect } from "react-redux";
 
@@ -14,8 +11,8 @@ let mapStateToProps = (state) => {
 };
 
 const DialogsContainer = connect(mapStateToProps, {
-  sendMessage: sendMessageActionCreator,
-  updateMessageText: updateMessageActionCreator,
+  sendMessage,
+  updateMessage,
 })(Dialogs);
 
 export default DialogsContainer;

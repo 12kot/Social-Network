@@ -19,8 +19,8 @@ const Dialogs = (props) => {
     props.sendMessage();
   };
 
-  let updateMessageText = () => {
-    props.updateMessageText(getMessage.current.value);
+  let updateMessage = () => {
+    props.updateMessage(getMessage.current.value);
   };
 
   return (
@@ -32,7 +32,7 @@ const Dialogs = (props) => {
           <div className={styles.input_box}>
             <textarea
               autoFocus
-              onChange={updateMessageText}
+              onChange={updateMessage}
               ref={getMessage}
               value={props.newMessageText}
             ></textarea>
