@@ -1,4 +1,5 @@
 import { combineReducers, legacy_createStore as createStore} from "redux";
+import authReducer from "./authReduces";
 import dialogsReducer from "./dialogsReducer";
 import friendsReducer from "./friendsReducer";
 import profileReducer from "./profileReducer";
@@ -11,6 +12,7 @@ let reducers = combineReducers({
     sidebar: sidebarReducer,
     toDoList: toDoListReducer,
     friendsPage: friendsReducer,
+    auth: authReducer,
 })
 
 let store = createStore(reducers);
