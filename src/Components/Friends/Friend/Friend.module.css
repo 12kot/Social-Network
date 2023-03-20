@@ -23,7 +23,7 @@
 .friend img {
   min-width: 13vw;
   min-height: 7.3vw;
-  max-height: 8vw;
+  max-height: 10vw;
 
   object-fit: cover;
   object-position: 0 0;

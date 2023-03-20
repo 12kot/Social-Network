@@ -21,6 +21,7 @@ let Friends = (props) => {
           return <button onClick={() => props.setCurrentPage(i)}>{i}</button>;
         })}
       </span>
+      
       <div className={`${styles.friends}`}>
         <div className={`${styles.items} ${styles.friend}`}>
           {props.getUsers()}
